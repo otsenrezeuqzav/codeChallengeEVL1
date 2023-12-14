@@ -1,0 +1,13 @@
+package com.example.codechallengeevl.network;
+
+import com.example.codechallengeevl.model.BeersModel;
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Headers;
+
+public interface APIService {
+    @Headers("Content-Type: application/json")
+    @GET("v2/beers")
+    Call<List<BeersModel>> ConsultaCervezasPOST();
+}
